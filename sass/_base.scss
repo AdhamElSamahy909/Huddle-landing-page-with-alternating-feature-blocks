@@ -1,0 +1,68 @@
+// MIXINS
+@mixin respond {
+  @media only screen and (min-width: 30em) {
+    @content;
+  }
+}
+
+//COLORS
+$color-pink: hsl(322, 100%, 66%);
+$color-very-pale-cyan: hsl(193, 100%, 96%);
+$color-very-dark-cyan: hsl(192, 100%, 9%);
+$color-grayish-blue: hsl(208, 11%, 55%);
+
+//FONTS
+$font-primary: "Open Sans", sans-serif;
+$font-display: "Poppins", sans-serif;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 112.5%; // 1rem = 18px
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+main {
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @include respond {
+    padding: 7.5rem 5.5rem;
+  }
+}
+
+.description {
+  position: relative;
+  padding-bottom: 15rem;
+
+  @include respond {
+    padding-bottom: 20rem;
+  }
+}
+
+.footer {
+  background-color: $color-very-dark-cyan;
+  padding: 7rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include respond {
+    padding: 13rem 7rem 3rem;
+  }
+}

@@ -1,0 +1,89 @@
+.header {
+  padding: 1.3rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: url("/images/bg-hero-mobile.svg");
+  background-color: $color-very-pale-cyan;
+  background-repeat: no-repeat;
+
+  @include respond {
+    background-image: url("/images/bg-hero-desktop.svg");
+    padding: 2.5rem 4rem;
+    text-align: start;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @include respond {
+      flex-direction: row;
+      align-items: center;
+      gap: 3.5rem;
+    }
+  }
+
+  &__logo {
+    width: 7rem;
+    height: min-content;
+
+    @include respond {
+      width: 11rem;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    color: $color-very-dark-cyan;
+
+    @include respond {
+      width: 40%;
+      align-items: flex-start;
+    }
+  }
+
+  &__heading {
+    font-family: $font-display;
+    font-weight: 600;
+    font-size: 1.5rem;
+
+    @include respond {
+      line-height: 1.5;
+      font-size: 2.2rem;
+      margin-top: 3.5rem;
+    }
+  }
+
+  &__paragraph {
+    font-size: 0.95rem;
+
+    @include respond {
+      font-size: 1rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    margin: 3.5rem 0 0.5rem;
+
+    @include respond {
+      width: 50%;
+    }
+  }
+}
+
+.media {
+  list-style: none;
+  gap: 1rem;
+
+  &__link {
+    width: 1rem;
+    height: 1rem;
+    fill: white;
+  }
+}
